@@ -9,11 +9,7 @@ const items = [
     answer:
       "Our pricing is pers use, per month. This means you only pay for the number of team members you have on your account. Discounts are available for larger teams and annual subscriptions.",
   },
-  {
-    question: "Can I change my plan later?",
-    answer:
-      "Yes, you can upgrade or downgrade your plan at any time. Changes to your plan will be prorated and reflected in your next billing cycle.",
-  },
+ 
   {
     question: "Is my data secure?",
     answer:
