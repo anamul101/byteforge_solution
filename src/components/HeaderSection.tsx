@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Button from "../utility/button";
-import Menu from "../assets/icons/menu.svg";
 import Link from "next/link";
 
 const HeaderSection = () => {
@@ -110,13 +108,29 @@ const HeaderSection = () => {
                     Customers
                   </Link>
                 </li>
-                <li>
+                <li className="relative group">
                   <Link
                     href="/About"
                     className="text-white hover:text-opacity-70 text-sm"
                   >
                     About
                   </Link>
+                    <ul className="hidden transform -translate-x-1/2 left-1/2 absolute group-hover:block bg-[#111] text-white  px-4 py-2 rounded-md shadow-lg w-[100px]">
+                      <li>
+                        <Link href="/About/OurTeam"
+                        className="text-white hover:text-opacity-70 text-sm"
+                        >
+                        Our Team
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/About/OurClient"
+                        className="text-white hover:text-opacity-70 text-sm"
+                        >
+                        Our Client
+                        </Link>
+                      </li>
+                    </ul>
                 </li>
               </ul>
             </nav>

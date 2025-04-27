@@ -386,5 +386,54 @@
     stroke: black;
   }
 
- 
+ /* dropdown */
+ #government-dropdown {
+  position: absolute;
+  padding-top: 2rem; /* pt-8 */
+  transform: translateX(-50%);
+  left: 50%;
+  perspective: 1500px;
+  min-width: 200px;
+}
+
+/* Dropdown menu items */
+#government-dropdown .dropdown-menu {
+  background: #000;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+#government-dropdown .dropdown-item {
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+#government-dropdown .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hover state for the button */
+button:hover + #government-dropdown,
+#government-dropdown:hover {
+  display: block;
+}
+
+/* Arrow decoration (optional) */
+#government-dropdown::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #000;
+  z-index: -1;
+}
   
