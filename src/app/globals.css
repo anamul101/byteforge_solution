@@ -108,7 +108,7 @@
 .hero_cubespinner__5nU4O div {
     position: absolute;
     inset: 0;
-    height: 60px;
+    height: 80px;
     text-align: center;
     background: linear-gradient(50deg, #714DFF, #9C83FF 31.28%, #E151FF 77.97%, #FFF759 95.64%);
     -webkit-background-clip: text;
@@ -142,54 +142,74 @@
 }
 
 .hero_cubespinner__5nU4O .hero_face2__hWvJM {
-    transform: rotateX(120deg) translateZ(30px);
+    transform: rotateX(90deg) translateZ(30px);
     -webkit-backface-visibility: hidden;
     cursor: pointer;
 }
 
 @media (min-width: 640px) {
     .hero_cubespinner__5nU4O .hero_face2__hWvJM {
-        transform: rotateX(120deg) translateZ(30px);
+        transform: rotateX(90deg) translateZ(30px);
     }
 }
 
 @media (min-width: 1024px) {
     .hero_cubespinner__5nU4O .hero_face2__hWvJM {
-        transform: rotateX(120deg) translateZ(45px);
+        transform: rotateX(90deg) translateZ(45px);
     }
 }
 
 .hero_cubespinner__5nU4O .hero_face3__qUXn4 {
-    transform: rotateX(240deg) translateZ(30px);
+    transform: rotateX(180deg) translateZ(30px);
     -webkit-backface-visibility: hidden;
     cursor: pointer;
 }
 
 @media (min-width: 640px) {
     .hero_cubespinner__5nU4O .hero_face3__qUXn4 {
-        transform: rotateX(240deg) translateZ(30px);
+        transform: rotateX(180deg) translateZ(30px);
     }
 }
 
 @media (min-width: 1024px) {
     .hero_cubespinner__5nU4O .hero_face3__qUXn4 {
-        transform: rotateX(240deg) translateZ(45px);
+        transform: rotateX(180deg) translateZ(45px);
+    }
+}
+.hero_cubespinner__5nU4O .hero_face4__qUXnd4 {
+    transform: rotateX(270deg) translateZ(30px);
+    -webkit-backface-visibility: hidden;
+    cursor: pointer;
+}
+
+@media (min-width: 640px) {
+    .hero_cubespinner__5nU4O .hero_face4__qUXnd4 {
+        transform: rotateX(270deg) translateZ(30px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero_cubespinner__5nU4O .hero_face4__qUXnd {
+        transform: rotateX(270deg) translateZ(45px);
     }
 }
 
 @keyframes hero_spincube__bGRiG {
-    0%, 33.3333333333% {
-        transform: rotateX(0deg);
-    }
-    33.3333333333%, 66.6666666667% {
-        transform: rotateX(120deg);
-    }
-    66.6666666667%, to {
-        transform: rotateX(240deg);
-    }
-    to {
-        transform: rotateX(1turn);
-    }
+  0%, 25% {
+      transform: rotateX(0deg);
+  }
+  25%, 50% {
+      transform: rotateX(90deg);
+  }
+  50%, 75% {
+      transform: rotateX(180deg);
+  }
+  75%, 100% {
+      transform: rotateX(270deg);
+  }
+  100% {
+      transform: rotateX(360deg);
+  }
 }
 
 /* researc Slider */
