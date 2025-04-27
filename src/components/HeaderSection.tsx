@@ -88,10 +88,10 @@ const HeaderSection = () => {
                 </li>
                 <li>
                   <Link
-                    href="/enterprise"
+                    href="/Blog"
                     className="text-white hover:text-opacity-70 text-sm"
                   >
-                    Enterprise
+                    Blog
                   </Link>
                 </li>
                 <li>
@@ -149,9 +149,12 @@ const HeaderSection = () => {
                   </Link>
                 </li>
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left py-2">
-                    Enterprise
-                  </button>
+                  <Link
+                    href="/Blog"
+                    className="text-white hover:text-opacity-70 text-sm"
+                  >
+                    Blog
+                  </Link>
                 </li>
                 <li>
                   <button className="text-white hover:text-opacity-70 text-sm w-full text-left py-2">

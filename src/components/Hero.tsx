@@ -82,9 +82,8 @@ export const Hero = () => {
               Transformation”
             </h2>
 
-            {/* Buttons */}
+            {/* Social Icons */}
             <div className="flex items-start w-full mx-auto space-x-6 md:mb-0 xl:mb-9 max-w-max">
-              {/* Social Icons */}
               <div className="flex items-start space-x-4">
                 <a
                   href="#"
