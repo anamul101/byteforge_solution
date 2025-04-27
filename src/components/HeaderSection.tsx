@@ -24,7 +24,7 @@ const HeaderSection = () => {
         className="absolute bottom-0 w-full h-px -translate-x-1/2 border-0 opacity-10 left-1/2"
       />
 
-      <div className="container lg:w-[1200px] py-2">
+      <div className="container lg:w-[1280px] py-2">
         <div className="flex items-center lg:relative lg:justify-between h-14 lg:h-18">
           <div className="flex justify-between w-full lg:w-auto lg:relative lg:z-10">
             <div className="flex items-center">
@@ -171,33 +171,9 @@ const HeaderSection = () => {
                     About
                   </Link>
                 </li>
-                <div className="flex items-center justify-between py-4 border-t border-gray-700 mt-2">
-                  <li>
-                    <Button />
-                  </li>
-                  <li>
-                    <a
-                      href="/"
-                      className="text-white hover:text-opacity-70 text-sm block py-2"
-                    >
-                      Log In
-                    </a>
-                  </li>
-                </div>
               </ul>
             </div>
           </div>
-
-          {/* Login and Button - visible on desktop */}
-          <nav className="hidden lg:flex items-center space-x-6">
-            <Button />
-            <a
-              className="text-white hover:text-opacity-70 text-sm"
-              href="https://dashboard.scale.com/login"
-            >
-              Log In
-            </a>
-          </nav>
         </div>
       </div>
     </header>
