@@ -1,5 +1,4 @@
 "use client";
-import Button from "@/utility/button";
 import Image from "next/image";
 import hero from "../assets/images/hero.webp";
 import { useEffect, useRef, useState } from "react";
@@ -66,19 +65,19 @@ export const Hero = () => {
               style={{ textShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.35)" }}
             >
               What we offer <br />
-              <span className="relative inline-block h-[1.2em]">
-                <span className="invisible">Mobile Application</span>
+              <span className="relative inline-block h-[1.2em] my-4">
+                <span className="invisible">Web&nbsp;Development</span>
                 <div className="hero_cubespinner__5nU4O">
-                  <div className="hero_face1____5ZN">Mobile Application</div>
-                  <div className="hero_face2__hWvJM">Digital Marketing</div>
-                  <div className="hero_face3__qUXn4">Video Editing</div>
-                  <div className="hero_face4__qUXnd4">Web Development</div>
+                  <div className="hero_face1____5ZN">Web&nbsp;Development</div>
+                  <div className="hero_face2__hWvJM">Digital&nbsp;Marketing</div>
+                  <div className="hero_face3__qUXn4">Video&nbsp;Editing</div>
+                  <div className="hero_face4__qUXnd4">Mobile&nbsp;Application</div>
                 </div>
               </span>
             </h1>
 
             {/* Subheading */}
-            <h2 className="my-6 font-sans text-base text-[#F5F5F5] sm:px-0 font-medium leading-normal lg:my-[22px] lg:text-lg md:w-11/12 lg:w-full text-center lg:max-w-[860px] mx-auto">
+            <h2 className="my-4 font-sans text-base text-[#F5F5F5] sm:px-0 font-medium leading-normal lg:my-[22px] lg:text-lg md:w-11/12 lg:w-full text-center lg:max-w-[860px] mx-auto">
               “ByteForge Solutions – Your All-in-One Partner for Digital
               Transformation”
             </h2>

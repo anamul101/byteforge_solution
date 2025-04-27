@@ -108,7 +108,7 @@
 .hero_cubespinner__5nU4O div {
     position: absolute;
     inset: 0;
-    height: 80px;
+    height: 65px;
     text-align: center;
     background: linear-gradient(50deg, #714DFF, #9C83FF 31.28%, #E151FF 77.97%, #FFF759 95.64%);
     -webkit-background-clip: text;
@@ -117,7 +117,7 @@
 
 @media (min-width: 1024px) {
     .hero_cubespinner__5nU4O div {
-        height: 89px;
+        height: 100px;
         max-width: -moz-max-content;
         max-width: max-content;
     }
