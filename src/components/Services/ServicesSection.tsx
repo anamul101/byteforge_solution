@@ -34,9 +34,6 @@ export const ServicesSection = () => {
               <h2 className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 md:mb-8 [text-wrap:balance]">
                 Powering AI for Defense, Intelligence,<br className="hidden md:inline"/> and Civilian Agencies.
               </h2>
-              <div className="w-full sm:w-auto">
-                <Button/>
-              </div>
             </div>
           </div>
 
