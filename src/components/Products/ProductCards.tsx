@@ -17,7 +17,6 @@ const ProductCards = () => {
             </p>
           </div>
         </div>
-        <ProductsCards />
       </div>
     </section>
   );

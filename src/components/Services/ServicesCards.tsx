@@ -140,7 +140,7 @@ export const ServicesCards = () => {
             <Link
               key={service.id}
               href={`/Service/${service.id}`}
-              className="group block overflow-hidden rounded-lg border border-white/10 bg-[#111] hover:border-white/20 transition-all duration-300"
+              className="group hover:shadow-lg hover:shadow-white/10 block overflow-hidden rounded-lg border border-white/10 bg-[#111] hover:border-white/20 transition-all duration-300"
               onClick={() => {
                 // Store the clicked service in sessionStorage
                 sessionStorage.setItem(
