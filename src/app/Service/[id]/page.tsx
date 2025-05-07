@@ -12,6 +12,7 @@ interface Service {
   url: string;
   isUpcoming?: boolean;
   ispast?: boolean;
+  features?: string[]; // Added features property
 }
 
 export default function ServiceInfo({ params }: { params: { id: string } }) {
@@ -50,9 +51,13 @@ export default function ServiceInfo({ params }: { params: { id: string } }) {
             <span className="inline-block mb-2 sm:mb-3 tracking-[1px] sm:tracking-[2px] text-xs md:text-sm uppercase bg-white/5 text-[#D1AAD7] rounded-full px-2.5 py-1 md:px-3 md:py-1.5">
               {service.category}
             </span>
-            <p className="text-xs md:text-sm text-white/50 mb-2 sm:mb-3">
-              {service.date}
-            </p>
+            <p className="text-xs sm:text-sm text-white/50 mb-3 sm:mb-4">
+                  {service.features?.map((feature, index) => (
+                    <ul key={index}>
+                      <li>{feature}</li>
+                    </ul>
+                  ))}
+                </p>
             <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-white">
               {service.title}
             </h3>

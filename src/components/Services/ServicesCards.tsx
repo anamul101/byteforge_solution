@@ -12,66 +12,59 @@ export const ServicesCards = () => {
     {
       id: 1,
       title: "Tailored Solutions to Power Your Business",
-      date: "March 26, 2025",
+      description:"We design and develop custom web-based software applications tailored specifically to your business workflows and operations. Our solutions improve efficiency, reduce manual work, and ensure seamless digital transformation.",
+      features: ["1. Business-specific features and dashboards.","2. Scalable architecture for future growth"],
       category: "Customized Web-Based Software",
       image: services1,
-      url: "https://www.dprte.co.uk/",
     },
     {
       id: 2,
       title: "DPRTE 2025 Conference",
-      date: "March 26, 2025",
+      Features: "March 26, 2025",
       category: "Conference",
       image: services2,
-      url: "https://www.dprte.co.uk/",
     },
     {
       id: 3,
       title: "DPRTE 2025 Conference",
-      date: "March 26, 2025",
+      Features: "March 26, 2025",
       category: "Conference",
       image: services3,
-      url: "https://www.dprte.co.uk/",
     },
     {
       id: 4,
       title: "DPRTE 2025 Conference",
-      date: "March 26, 2025",
+      Features: "March 26, 2025",
       category: "Conference",
       image: services1,
-      url: "https://www.dprte.co.uk/",
     },
     {
       id: 5,
       title: "DPRTE 2025 Conference",
-      date: "March 26, 2025",
+      Features: "March 26, 2025",
       category: "Conference",
       image: services1,
-      url: "https://www.dprte.co.uk/",
     },
     {
       id: 6,
       title: "DPRTE 2025 Conference",
-      date: "March 26, 2025",
+      Features: "March 26, 2025",
       category: "Conference",
       image: services1,
-      url: "https://www.dprte.co.uk/",
     },
     {
       id: 7,
       title: "DPRTE 2025 Conference",
-      date: "March 26, 2025",
+      Features: "March 26, 2025",
       category: "Conference",
       image: services1,
-      url: "https://www.dprte.co.uk/",
     },
     {
       id: 8,
       title: "DPRTE 2025 Conference",
-      date: "March 26, 2025",
+      Features: "March 26, 2025",
       category: "Conference",
       image: services1,
-      url: "https://www.dprte.co.uk/",
     },
     // Add other events with isUpcoming: true/false
   ];
@@ -111,7 +104,11 @@ export const ServicesCards = () => {
                   {service.category}
                 </span>
                 <p className="text-xs sm:text-sm text-white/50 mb-3 sm:mb-4">
-                  {service.date}
+                  {service.features?.map((feature, index) => (
+                    <ul key={index}>
+                      <li>{feature}</li>
+                    </ul>
+                  ))}
                 </p>
                 <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white">
                   {service.title}
