@@ -169,13 +169,8 @@ export const ServicesCards = () => {
                   {service.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-white/50 mb-3 sm:mb-4">
-                  {service.description
-                    ?.match(/.{1,60}(\s|$)/g)
-                    ?.map((line, index) => (
-                      <span key={index}>
-                        {line.trim()}
-                      </span>
-                    ))}
+                  {service.description?.slice(0, 100).trim()}
+                  {service.description?.length > 100 && "..."}
                 </p>
               </div>
             </Link>
