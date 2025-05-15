@@ -61,9 +61,9 @@ const Slidertest = () => {
 
   const features = [
     {
-      title: "Fine-Tuning and RLHF",
+      title: "Why ByteForge Solutions",
       description:
-        "Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.",
+        "At ByteForge Solutions, we believe in building more than just software — we build digital foundations for your success. As a passionate and forward-thinking IT company, we specialize in crafting customized web-based software, scalable e-commerce solutions, mobile applications, and result-driven digital marketing strategies. With a customer-first mindset, we combine creativity, technical excellence, and deep industry insight to help businesses evolve in the digital age. Whether you're a startup, SME, or enterprise, we provide tailored digital solutions that are not only functional but also future-ready.",
       media: (
         <div className=" w-full xl:w-[624px] h-[300px] xl:h-[624px] relative z-10 flex justify-center xl:justify-end items-center xl:absolute xl:right-0 xl:top-[38px]">
           <video autoPlay playsInline loop muted className="w-full h-full object-contain">
@@ -77,9 +77,9 @@ const Slidertest = () => {
       mobileImage: foundationModels.src,
     },
     {
-      title: "Foundation Models",
+      title: "Our Mission",
       description:
-        "Scale partners or integrates with all of the leading AI models, from open-source to closed-source, including OpenAI, Google, Meta, Cohere, and more.",
+        "Our mission is to empower businesses through innovative digital solutions that drive measurable impact. We aim to simplify complex challenges by providing reliable, scalable, and cost-effective technology tailored to our clients' unique needs. From idea to implementation, we strive to deliver excellence in every step of the digital journey — ensuring that our clients are not only competitive but also leading in their industries.",
       media: (
         <motion.div
           className="w-full xl:w-[624px] h-[300px] xl:h-[624px] relative z-10 flex justify-center xl:justify-end items-center xl:absolute xl:right-0 xl:top-[38px]"
@@ -89,7 +89,7 @@ const Slidertest = () => {
         >
           <img
             src={foundationModels.src}
-            alt="Foundation models"
+            alt="Our Mission"
             className="w-full h-full object-contain"
           />
         </motion.div>
@@ -97,9 +97,9 @@ const Slidertest = () => {
       mobileImage: dataModel.src,
     },
     {
-      title: "Enterprise Data",
+      title: "Our Vision",
       description:
-        "Scale's Data Engine enables you to integrate your enterprise data into the fold of these models, providing the base for long-term strategic differentiation.",
+        "Our vision is to become a trusted global leader in digital transformation, known for helping businesses embrace innovation with confidence. We envision a world where every company — no matter the size — can harness the power of technology to reach its full potential.",
       media: (
         <motion.div
           className="w-full xl:w-[624px] h-[300px] xl:h-[624px] relative z-10 flex justify-center xl:justify-end items-center xl:absolute xl:right-0 xl:top-[38px]"
@@ -109,7 +109,7 @@ const Slidertest = () => {
         >
           <img
             src={dataModel.src}
-            alt="Enterprise data"
+            alt="Our Vision"
             className="w-full h-full object-contain"
           />
         </motion.div>

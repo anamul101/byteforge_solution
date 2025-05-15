@@ -23,9 +23,9 @@ const GenerativeAISection = () => {
           <h2 className="font-aeonik leading-snug lg:leading-[1.25] text-3xl md:text-4.5xl lg:text-5xl [text-wrap:balance]">
           Our Mission & Vision
           </h2>
-          <p className="mt-4 lg:mt-2 leading-[1.60] text-neutral-100 lg:text-gray-300 lg:text-xl [text-wrap:balance] [white-space:inherit] block font-normal">
-            Whether you're building your own models or applying foundation
-            models to your business, data remains the biggest bottleneck to AI.
+          <p className="text-center mt-4 lg:mt-2 leading-[1.60] text-neutral-100 lg:text-gray-300 lg:text-xl [text-wrap:balance] [white-space:inherit] block font-normal">
+          What sets us apart is our commitment to collaboration, transparency, and continuous improvement. 
+          We don’t just deliver projects — we build lasting partnerships to help you grow.
           </p>
           <div className="mt-8 flex items-center gap-x-6">
             <a
