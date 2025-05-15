@@ -18,10 +18,10 @@ const GenerativeAISection = () => {
       <div className="container relative ">
         <div className="flex flex-col max-w-3xl mx-auto items-center justify-center text-center mb-10 md:mb-20 md:mt-12 !mb-16">
           <div className="mb-5 lg:mb-5 overflow-hidden tracking-[3px] text-xs md:px-5 md:py-2 lg:text-xs uppercase bg-white bg-opacity-5 text-[#D1AAD7] rounded-full px-4 py-2">
-            <span>AI for the Enterprise</span>
+            <span>Why ByteForge Solutions</span>
           </div>
           <h2 className="font-aeonik leading-snug lg:leading-[1.25] text-3xl md:text-4.5xl lg:text-5xl [text-wrap:balance]">
-            Generative AI Architecture
+          Our Mission & Vision
           </h2>
           <p className="mt-4 lg:mt-2 leading-[1.60] text-neutral-100 lg:text-gray-300 lg:text-xl [text-wrap:balance] [white-space:inherit] block font-normal">
             Whether you're building your own models or applying foundation
