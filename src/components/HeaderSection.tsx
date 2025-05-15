@@ -94,18 +94,26 @@ const HeaderSection = () => {
                 </li>
                 <li>
                   <Link
-                    href="/government"
+                    href="/OurClients"
                     className="text-white hover:text-opacity-70 text-sm"
                   >
-                    Government
+                    Our Client’s
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/customers"
+                    href="/OurTeam"
                     className="text-white hover:text-opacity-70 text-sm"
                   >
-                    Customers
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/Contact"
+                    className="text-white hover:text-opacity-70 text-sm"
+                  >
+                    Contact
                   </Link>
                 </li>
                 <li className="relative group">
@@ -115,22 +123,32 @@ const HeaderSection = () => {
                   >
                     About
                   </Link>
-                    <ul className="hidden transform -translate-x-1/2 left-1/2 absolute group-hover:block bg-[#111] text-white  px-4 py-2 rounded-md shadow-lg w-[100px]">
-                      <li>
-                        <Link href="/About/OurTeam"
+                  <ul className="hidden transform -translate-x-1/2 left-1/2 absolute group-hover:block bg-[#111] text-white  px-4 py-2 rounded-md shadow-lg w-[200px]">
+                    <li>
+                      <Link
+                        href="/About/ByteForgeSolutions"
                         className="text-white hover:text-opacity-70 text-sm"
-                        >
-                        Our Team
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/About/OurClient"
+                      >
+                        Why ByteForge Solutions
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/About/OurMission"
                         className="text-white hover:text-opacity-70 text-sm"
-                        >
-                        Our Client
-                        </Link>
-                      </li>
-                    </ul>
+                      >
+                        Our Mission
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/About/OurVision"
+                        className="text-white hover:text-opacity-70 text-sm"
+                      >
+                        Our Vision
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </nav>
@@ -181,7 +199,7 @@ const HeaderSection = () => {
                   </button>
                 </li>
                 <li>
-                <Link
+                  <Link
                     href="/About"
                     className="text-white hover:text-opacity-70 text-sm"
                   >
