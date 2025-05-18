@@ -19,7 +19,7 @@ interface TeamCardProps {
 const TeamCard = ({ member }: TeamCardProps) => {
   return (
     <div className="flex items-center gap-6 p-6 border border-[rgba(255,255,255,0.1)] hover:border-[#a370ab] rounded-lg group bg-[#111] transition-all duration-300 ease-out hover:shadow-[0_4px_12px_rgba(163,112,171,0.25)]">
-      {/* Image Section with animated border and scale */}
+      {/* Image Section */}
       <div className="flex-shrink-0 rounded-full border-2 border-white/20 p-1 hover:border-[#a370ab] transition-all duration-300 ease-out group-hover:scale-105 transform-gpu">
         <Image
           className="h-[100px] w-[100px] rounded-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
@@ -85,12 +85,9 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="py-10 px-4 bg-black">
-      <div className="container lg:w-[1280px] mx-auto py-10 overflow-hidden">
-         <div className=" overflow-hidden tracking-[3px] text-xs md:px-5 md:py-2 lg:text-xs ">
-            <span>Why</span>
-          </div>
-        <h2 className="text-3xl font-bold  mb-8 text-center uppercase text-[#D1AAD7] rounded-full ">
+    <section className="py-10 px-4 bg-black relative overflow-hidden">
+      <div className="container lg:w-[1280px] mx-auto py-10 overflow-hidden relative">
+        <h2 className="text-3xl font-bold mb-8 text-center uppercase text-[#D1AAD7] rounded-full">
           Our Team
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
