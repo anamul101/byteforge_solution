@@ -18,11 +18,11 @@ interface TeamCardProps {
 
 const TeamCard = ({ member }: TeamCardProps) => {
   return (
-    <div className="flex items-center gap-6 p-6 border border-[rgba(255,255,255,0.1)] hover:border-[#a370ab] rounded-lg group bg-[#111]">
-      {/* Image Section with border */}
-      <div className="flex-shrink-0 rounded-full border-2 border-white/20 p-1 hover:border-[#a370ab] transition-colors">
+    <div className="flex items-center gap-6 p-6 border border-[rgba(255,255,255,0.1)] hover:border-[#a370ab] rounded-lg group bg-[#111] transition-all duration-300 ease-out hover:shadow-[0_4px_12px_rgba(163,112,171,0.25)]">
+      {/* Image Section with animated border and scale */}
+      <div className="flex-shrink-0 rounded-full border-2 border-white/20 p-1 hover:border-[#a370ab] transition-all duration-300 ease-out group-hover:scale-105 transform-gpu">
         <Image
-          className="h-[100px] w-[100px] rounded-full object-cover"
+          className="h-[100px] w-[100px] rounded-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
           src={member.imageUrl}
           alt={`${member.name} profile photo`}
           width={100}
@@ -70,12 +70,27 @@ const TeamSection = () => {
       imageUrl: team1,
       description: "Strategic marketing leader with digital campaign expertise...",
     },
+    {
+      name: "Sarah Williams",
+      role: "Marketing Director",
+      imageUrl: team1,
+      description: "Strategic marketing leader with digital campaign expertise...",
+    },
+    {
+      name: "Sarah Williams",
+      role: "Marketing Director",
+      imageUrl: team1,
+      description: "Strategic marketing leader with digital campaign expertise...",
+    },
   ];
 
   return (
-    <section className=" py-12 px-4 bg-black">
+    <section className="py-10 px-4 bg-black">
       <div className="container lg:w-[1280px] mx-auto py-10 overflow-hidden">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">
+         <div className=" overflow-hidden tracking-[3px] text-xs md:px-5 md:py-2 lg:text-xs ">
+            <span>Why</span>
+          </div>
+        <h2 className="text-3xl font-bold  mb-8 text-center uppercase text-[#D1AAD7] rounded-full ">
           Our Team
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
