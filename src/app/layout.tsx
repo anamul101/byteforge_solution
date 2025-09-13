@@ -4,6 +4,7 @@ import clsx from "clsx";
 import "./globals.css";
 import HeaderSection from "@/components/HeaderSection";
 import Footer from "@/components/Footer";
+import Footer1 from "@/components/Footer2";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body style={{backgroundColor:"black"}} className={clsx(dmSans.className, "antialiased")}>
       <HeaderSection/>
        {children}
-      <Footer/>
+      <Footer1/>
       </body>
     </html>
   );

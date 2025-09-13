@@ -20,6 +20,7 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,6 +28,14 @@ const ContactSection = () => {
       ...prev,
       [name]: value
     }));
+  };
+
+  const handleFocus = (fieldName: string) => {
+    setFocusedField(fieldName);
+  };
+
+  const handleBlur = () => {
+    setFocusedField(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -64,93 +73,148 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-gray-800 p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
+          <div className="bg-black p-8 rounded-xl border border-gray-800">
+            <h3 className="text-2xl font-bold mb-6 text-[#c831e0]">Get In Touch</h3>
             
             {submitStatus === 'success' && (
-              <div className="bg-green-800 text-green-200 p-4 rounded-md mb-6">
+              <div className="bg-green-900/30 border border-green-800 text-green-300 p-4 rounded-md mb-6">
                 Thank you for your message! We&apos;ll get back to you soon.
               </div>
             )}
             
             {submitStatus === 'error' && (
-              <div className="bg-red-800 text-red-200 p-4 rounded-md mb-6">
+              <div className="bg-red-900/30 border border-red-800 text-red-300 p-4 rounded-md mb-6">
                 There was an error sending your message. Please try again.
               </div>
             )}
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="relative">
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    onFocus={() => handleFocus('name')}
+                    onBlur={handleBlur}
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-                    placeholder="Your name"
+                    className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-700 focus:border-blue-500 focus:ring-0 outline-none transition-all duration-300"
+                    placeholder=" "
                   />
+                  <label 
+                    htmlFor="name" 
+                    className={`absolute left-0 transition-all duration-300 ${
+                      focusedField === 'name' || formData.name 
+                        ? '-top-5 text-sm text-white' 
+                        : 'top-3 text-gray-500'
+                    }`}
+                  >
+                    Name
+                  </label>
                 </div>
                 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+                <div className="relative">
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    onFocus={() => handleFocus('email')}
+                    onBlur={handleBlur}
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-                    placeholder="your.email@example.com"
+                    className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-700 focus:border-blue-500 focus:ring-0 outline-none transition-all duration-300"
+                    placeholder=" "
                   />
+                  <label 
+                    htmlFor="email" 
+                    className={`absolute left-0 transition-all duration-300 ${
+                      focusedField === 'email' || formData.email 
+                        ? '-top-5 text-sm text-white' 
+                        : 'top-3 text-gray-500'
+                    }`}
+                  >
+                    Email
+                  </label>
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone Number</label>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="relative">
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-                    placeholder="+1 (555) 123-4567"
+                    onFocus={() => handleFocus('phone')}
+                    onBlur={handleBlur}
+                    className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-700 focus:border-blue-500 focus:ring-0 outline-none transition-all duration-300"
+                    placeholder=" "
                   />
+                  <label 
+                    htmlFor="phone" 
+                    className={`absolute left-0 transition-all duration-300 ${
+                      focusedField === 'phone' || formData.phone 
+                        ? '-top-5 text-sm text-white' 
+                        : 'top-3 text-gray-500'
+                    }`}
+                  >
+                    Phone Number
+                  </label>
                 </div>
                 
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
+                <div className="relative">
                   <input
                     type="text"
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
+                    onFocus={() => handleFocus('subject')}
+                    onBlur={handleBlur}
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-                    placeholder="What is this regarding?"
+                    className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-700 focus:border-blue-500 focus:ring-0 outline-none transition-all duration-300"
+                    placeholder=" "
                   />
+                  <label 
+                    htmlFor="subject" 
+                    className={`absolute left-0 transition-all duration-300 ${
+                      focusedField === 'subject' || formData.subject 
+                        ? '-top-5 text-sm text-white' 
+                        : 'top-3 text-gray-500'
+                    }`}
+                  >
+                    Subject
+                  </label>
                 </div>
               </div>
               
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+              <div className="relative">
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  onFocus={() => handleFocus('message')}
+                  onBlur={handleBlur}
                   required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-                  placeholder="Tell us about your project..."
+                  rows={3}
+                  className="w-full px-0 py-3 bg-transparent border-0 border-b border-gray-700 focus:border-blue-500 focus:ring-0 outline-none transition-all duration-300 resize-none"
+                  placeholder=" "
                 ></textarea>
+                <label 
+                  htmlFor="message" 
+                  className={`absolute left-0 transition-all duration-300 ${
+                    focusedField === 'message' || formData.message 
+                      ? '-top-5 text-sm text-white' 
+                      : 'top-3 text-gray-500'
+                  }`}
+                >
+                  Message
+                </label>
               </div>
               
               <button
@@ -164,8 +228,8 @@ const ContactSection = () => {
           </div>
           
           {/* Contact Information */}
-          <div className="bg-gray-800 p-8 rounded-xl shadow-lg h-full">
-            <h3 className="text-2xl font-bold mb-6">Contact Info</h3>
+          <div className="bg-black p-8 rounded-xl border border-gray-800 h-full">
+            <h3 className="text-2xl font-bold mb-6 text-[#c831e0]">Contact Info</h3>
             
             <div className="space-y-6">
               <div>
@@ -175,17 +239,6 @@ const ContactSection = () => {
                   info@ustiba.com
                 </p>
               </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold mb-2 text-blue-400">Banking & Capital Market Product</h4>
-                <p className="text-gray-300">+168 0716647475</p>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold mb-2 text-blue-400">Visit & Tap</h4>
-                <p className="text-gray-300">+88 0702644244</p>
-              </div>
-              
               <div>
                 <h4 className="text-lg font-semibold mb-2 text-blue-400">Point of Scout(PCI)</h4>
                 <p className="text-gray-300">
@@ -200,7 +253,7 @@ const ContactSection = () => {
               </div>
             </div>
             
-            <div className="mt-8 pt-6 border-t border-gray-700">
+            <div className="mt-8 pt-6 border-t border-gray-800">
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Office Hours</h4>
               <p className="text-gray-300">
                 Monday - Friday: 9:00 AM - 6:00 PM<br />
